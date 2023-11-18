@@ -1,0 +1,11 @@
+@import "../../swagger-ui/src/style/mixins";
+
+@mixin invalidFormElement() {
+    animation: shake .4s 1;
+    border-color: $_color-delete;
+    @if $dark-theme{
+      background: darken($_color-delete, 35%);
+    } @else {
+      background: lighten($_color-delete, 35%);
+    }
+}

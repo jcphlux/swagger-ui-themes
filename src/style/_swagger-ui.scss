@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  background: invert-for-dark-theme($gray-50);
+  color: $text-body-default-font-color;
+  *{
+    color: $text-body-default-font-color;
+  }
+}
+
+.swagger-ui
+{
+    @import 'mixins';
+    @import '../../swagger-ui/src/style/type';
+    @import '../../swagger-ui/src/style/layout';
+    @import 'buttons';
+    @import 'form';
+    @import '../../swagger-ui/src/style/modal';
+    @import 'models';
+    @import '../../swagger-ui/src/style/servers';
+    @import '../../swagger-ui/src/style/table';
+    @import '../../swagger-ui/src/style/topbar';
+    @import '../../swagger-ui/src/style/information';
+    @import '../../swagger-ui/src/style/authorize';
+    @import '../../swagger-ui/src/style/errors';
+    @include text_body();
+    @import '../../swagger-ui/src/style/split-pane-mode';
+    @import '../../swagger-ui/src/style/markdown';
+    @import '../../swagger-ui/src/core/plugins/json-schema-2020-12/components/all';
+    @import '../../swagger-ui/src/core/plugins/oas31/components/all';
+}

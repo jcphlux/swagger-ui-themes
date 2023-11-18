@@ -1,0 +1,31 @@
+@import "../../swagger-ui/src/style/form";
+
+select
+{
+    background: $form-select-background-color url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#ffffff" d="M13.418 7.859c.271-.268.709-.268.978 0 .27.268.272.701 0 .969l-3.908 3.83c-.27.268-.707.268-.979 0l-3.908-3.83c-.27-.267-.27-.701 0-.969.271-.268.709-.268.978 0L10 11l3.418-3.141z"/></svg>') right 10px center no-repeat;
+}
+input,
+textarea,
+select {
+    &[disabled] {
+        background-color: $_color-background-disabled;
+        color: $_color-disabled;
+    }
+}
+
+select[disabled] {
+    border-color: $_color-disabled;
+}
+
+.checkbox
+{
+    input[type=checkbox]
+    {
+        &:checked + label > .item
+        {
+            $svg-content: '<svg width="10px" height="8px" viewBox="3 7 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg"><polygon id="Rectangle-34" stroke="none" fill="#{$form-checkbox-label-font-color}" fill-rule="evenodd" points="6.33333333 15 3 11.6666667 4.33333333 10.3333333 6.33333333 12.3333333 11.6666667 7 13 8.33333333"></polygon></svg>';
+            $svg-background: url('data:image/svg+xml, #{$svg-content}') center center no-repeat;
+            background:$form-checkbox-background-color $svg-background;
+        }
+    }
+}

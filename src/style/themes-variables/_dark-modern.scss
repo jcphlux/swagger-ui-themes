@@ -1,0 +1,28 @@
+// Dark Modern Theme
+$dark-theme: true;
+
+@import 'default';
+
+// override variables here
+$_color-disabled: $gray-400;
+
+// Form
+$form-select-background-color: $gray-650;
+
+$form-input-background-color: $gray-700;
+$form-checkbox-background-color: $gray-700;
+$form-checkbox-box-shadow-color: invert-for-dark-theme($alto-gray);
+
+// Information
+$scheme-container-background-color: $gray-900;
+
+// Layout
+$opblock-isopen-section-header-background-color: $gray-800;
+
+$server-container-background-color: $gray-800;
+
+// Modal
+$dialog-ux-modal-background-color: $gray-800;
+
+// Models
+$section-models-h4-background-color-hover: $gray-800;

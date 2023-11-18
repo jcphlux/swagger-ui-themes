@@ -1,0 +1,10 @@
+@import "../../swagger-ui/src/style/buttons";
+
+button
+{
+  background-color: $btn-background-color;
+  svg {
+      fill: $expand-methods-svg-fill-color;
+    }
+
+}
