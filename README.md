@@ -4,6 +4,10 @@
 ## Introduction
 Themes are a powerful addition to any user interface, and for Swagger UI, they bring a range of benefits that enhance both the developer experience and the end-user interaction.
 
+## Demo
+- [Default](https://jcphlux.github.io/swagger-ui-themes/)
+- [Dark Modern](https://jcphlux.github.io/swagger-ui-themes/?theme=dark-modern)
+- [Dark](https://jcphlux.github.io/swagger-ui-themes/?theme=dark)
 ### Why Themes Matter for Swagger UI
 Swagger UI is a popular framework for generating beautiful, interactive documentation for APIs. While it excels at presenting structured data, the visual experience often remains generic and may not align with the unique branding and stylistic preferences of different projects or companies. This is where themes come into play.
 
