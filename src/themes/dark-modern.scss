@@ -1,7 +1,7 @@
 // Dark Modern Theme
 $dark-theme: true;
 
-@import 'default';
+@import '../style/variables';
 
 // override variables here
 $_color-disabled: $gray-400;
@@ -26,3 +26,6 @@ $dialog-ux-modal-background-color: $gray-800;
 
 // Models
 $section-models-h4-background-color-hover: $gray-800;
+
+//swagger
+@import '../style/swagger-ui';

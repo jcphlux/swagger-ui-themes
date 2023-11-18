@@ -1,5 +1,7 @@
 @use 'sass:color';
 
+@import '~tachyons-sass/tachyons.scss';
+
 @function invert-for-dark-theme($color) {
   // Check if dark theme is enabled
   @if $dark-theme {

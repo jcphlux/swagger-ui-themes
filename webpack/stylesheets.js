@@ -7,8 +7,9 @@ const projectBasePath = path.join(__dirname, "../");
 module.exports = {
   mode: "production",
   entry: {
-    "swagger-ui": "./src/style/main.scss",
-    "swagger-dark-modern-ui": "./src/style/main-dark-modern.scss",
+    "swagger-ui": "./src/themes/default.scss",
+    "swagger-dark-ui": "./src/themes/dark.scss",
+    "swagger-dark-modern-ui": "./src/themes/dark-modern.scss",
   },
 
   module: {
