@@ -1,0 +1,30 @@
+<!-- HTML for dev server -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      id="swagger-theme"
+      rel="stylesheet"
+      type="text/css"
+      href="../dist/swagger-ui.css"
+    />
+    <title>Swagger UI</title>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+    <script>      
+        const params = new URLSearchParams(window.location.search);
+        const theme = params.get("theme"); // 'theme' is the URL parameter
+        if (theme) {
+          const link = document.getElementById("swagger-theme");
+          link.href = `../dist/swagger-${theme}-ui.css`; // Modify the path as needed
+        }
+    </script>
+    <script src="../swagger-ui/dist/swagger-ui-bundle.js"></script>
+    <script src="../swagger-ui/dist/swagger-ui-standalone-preset.js"></script>
+    <script src="../swagger-ui/dist/swagger-initializer.js"></script>
+  </body>
+</html>

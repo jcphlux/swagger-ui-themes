@@ -1,16 +1,16 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const path = require("path");
 
+const projectBasePath = path.join(__dirname, "../");
+
 module.exports = {
-  mode: "development", // Change to 'production' when ready to deploy
+  mode: "production",
   entry: {
     "swagger-ui": "./src/style/main.scss",
     "swagger-dark-modern-ui": "./src/style/main-dark-modern.scss",
   },
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"), // Output directory
-  },
+
   module: {
     rules: [
       {
@@ -28,17 +28,13 @@ module.exports = {
             options: {
               postcssOptions: {
                 sourceMap: true,
-                plugins: [
-                  require("cssnano")(),
-                  "postcss-preset-env", // applies autoprefixer
-                ],
+                plugins: [require("cssnano")(), "postcss-preset-env"],
               },
             },
           },
           {
             loader: "sass-loader",
             options: {
-              // Prefer `dart-sass`
               implementation: require("sass"),
               sourceMap: true,
               sassOptions: {
@@ -52,6 +48,7 @@ module.exports = {
   },
 
   plugins: [
+    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
@@ -60,7 +57,7 @@ module.exports = {
   devtool: "source-map",
 
   output: {
-    path: path.join(__dirname, "../", "dist"),
+    path: path.join(projectBasePath, "dist"),
     publicPath: "/dist",
   },
 
